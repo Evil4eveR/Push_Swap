@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:37:24 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 16:13:06 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/04 16:51:16 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,8 @@ typedef struct s_stack
 	t_node	*end;
 	size_t	size;
 }	t_stack;
+
+t_stack	*init_stack(void);
 
 void	pa(t_stack *a, t_stack *b);
 void	pb(t_stack *a, t_stack *b);

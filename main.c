@@ -14,22 +14,43 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+t_stack	*init_stack(void)
+{
+	t_stack *stck;
+	stck = malloc(sizeof(t_stack));
+	if(!stck)
+		return NULL;
+	stck->top = NULL;
+	stck->end = NULL;
+	stck->size = 0;
+	return stck;
+}
 
+int ft_isvalid(const char *s)
+{
+    while (*s == ' ' || (*s >= 9 && *s <= 13))
+        s++;
+    if (*s == '+' || *s == '-')
+        s++;
+    if (!ft_isdigit(*s))
+        return 0;
+    while (ft_isdigit(*s))
+        s++;
+	return (1);
+}
 int main(int argc, char **argv)
 {
-	(void)argv;
-	if (argc <= 1)
+	t_stack *a;
+	t_stack *b;
+	if(argc <= 1)
 		return (0);
-	else
+	a = init_stack();
+	b = init_stack();
+	int i = 1;
+	while(i < argc)
 	{
-		if(argc == 2)
-		{
-			// here i have to check the second argument if the string is has integers or not and split them 
-		}
-		else
-		{
-			// here i have to check every argument if integer push to the stack if it is a string but integer i think i have to converted to integer and push but if a char return er
-		}
-	return (0);
+		printf("argv[%d] = %s\n", i,argv[i]);
+		i++;
 	}
+	return (0);
 }
