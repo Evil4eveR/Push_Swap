@@ -6,7 +6,7 @@
 #    By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/04 11:50:28 by ymarmoud          #+#    #+#              #
-#    Updated: 2026/04/04 16:17:51 by ymarmoud         ###   ########.fr        #
+#    Updated: 2026/04/04 16:36:51 by ymarmoud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,8 +14,8 @@ NAME	= push_swap
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 LIBFT = minilibft
-AR = ar
-SRCS	= main.c operations.c \
+
+SRCS	= main.c operations.c operations_b.c operations_a.c \
 		minilibft/ft_strlen.c \
 		minilibft/ft_atoi.c \
 		minilibft/ft_split.c \

@@ -6,11 +6,11 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 16:02:03 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 16:05:52 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/04 16:28:45 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 static size_t	count_words(const char *s, char c)
 {

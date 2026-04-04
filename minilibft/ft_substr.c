@@ -6,11 +6,11 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 16:10:38 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 16:10:50 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/04 16:28:35 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

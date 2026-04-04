@@ -6,11 +6,11 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 16:03:07 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 16:05:59 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/04 16:28:51 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 int	ft_atoi(const char *nptr)
 {
