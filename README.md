@@ -61,3 +61,27 @@ Shifts all elements of stack b down by one. Bottom becomes top.
 
 ### rrr
 Calls rra and rrb at the same time.
+
+## Project Structure
+
+- `push_swap.h` — header file, structs and prototypes
+- `main.c` — entry point, input parsing, stack initialization
+- `operations.c` — all 11 stack operations
+- `Makefile` — compiles the project
+
+## Instructions
+
+### Compilation
+```bash
+make
+```
+
+### Usage
+```bash
+./push_swap 4 67 3 87 23
+```
+
+### Cleanup
+```bash
+make fclean
+```

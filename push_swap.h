@@ -6,12 +6,14 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:37:24 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 11:42:10 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/04 12:06:10 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef PUSH_SWAP_H
+#ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
+
+#include <stdlib.h>
 
 typedef struct s_node
 {
