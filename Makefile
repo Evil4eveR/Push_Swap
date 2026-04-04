@@ -6,15 +6,22 @@
 #    By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/04 11:50:28 by ymarmoud          #+#    #+#              #
-#    Updated: 2026/04/04 11:54:05 by ymarmoud         ###   ########.fr        #
+#    Updated: 2026/04/04 16:17:51 by ymarmoud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	= push_swap
 CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
-
-SRCS	= main.c operations.c
+LIBFT = minilibft
+AR = ar
+SRCS	= main.c operations.c \
+		minilibft/ft_strlen.c \
+		minilibft/ft_atoi.c \
+		minilibft/ft_split.c \
+		minilibft/ft_isdigit.c \
+		minilibft/ft_substr.c \
+		minilibft/ft_strdup.c
 OBJS	= $(SRCS:.c=.o)
 
 all: $(NAME)
