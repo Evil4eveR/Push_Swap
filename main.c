@@ -26,18 +26,6 @@ t_stack	*init_stack(void)
 	return stck;
 }
 
-int ft_isvalid(const char *s)
-{
-    while (*s == ' ' || (*s >= 9 && *s <= 13))
-        s++;
-    if (*s == '+' || *s == '-')
-        s++;
-    if (!ft_isdigit(*s))
-        return 0;
-    while (ft_isdigit(*s))
-        s++;
-	return (1);
-}
 int main(int argc, char **argv)
 {
 	t_stack *a;

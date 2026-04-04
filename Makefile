@@ -6,7 +6,7 @@
 #    By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/04 11:50:28 by ymarmoud          #+#    #+#              #
-#    Updated: 2026/04/04 16:36:51 by ymarmoud         ###   ########.fr        #
+#    Updated: 2026/04/04 23:54:00 by ymarmoud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ CC		= cc
 CFLAGS	= -Wall -Wextra -Werror
 LIBFT = minilibft
 
-SRCS	= main.c operations.c operations_b.c operations_a.c \
+SRCS	= main.c operations/operations.c operations/operations_b.c operations/operations_a.c \
 		minilibft/ft_strlen.c \
 		minilibft/ft_atoi.c \
 		minilibft/ft_split.c \

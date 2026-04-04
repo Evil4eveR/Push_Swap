@@ -6,11 +6,11 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:42:36 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 16:37:39 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/04 23:54:07 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../push_swap.h"
 
 void	sa(t_stack *a)
 {
