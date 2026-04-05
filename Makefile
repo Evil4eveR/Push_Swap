@@ -6,7 +6,7 @@
 #    By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/04 11:50:28 by ymarmoud          #+#    #+#              #
-#    Updated: 2026/04/05 17:59:29 by ymarmoud         ###   ########.fr        #
+#    Updated: 2026/04/05 18:22:10 by ymarmoud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,8 @@ SRCS	= main.c operations/operations.c operations/operations_b.c operations/opera
 		minilibft/ft_strdup.c \
 		minilibft/ft_atol.c \
 		utils/stack_utils.c \
-		utils/extra.c
+		utils/extra.c \
+		algo/sorting.c
 		
 OBJS	= $(SRCS:.c=.o)
 

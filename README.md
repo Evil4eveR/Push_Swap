@@ -85,3 +85,38 @@ make
 ```bash
 make fclean
 ```
+
+## Input Validation
+
+The program validates all arguments before processing:
+- Arguments can be passed as separate integers or quoted strings with spaces
+- Example: `./push_swap 1 "4 5 6" 7` is valid
+- Each number is validated using `ft_atol` which checks:
+  - Only digits with optional +/- sign
+  - Within INT range (-2147483648 to 2147483647)
+- Duplicates are detected before pushing to stack
+- Any invalid input prints `Error` to stderr and exits
+
+## Stack Filling
+
+### ft_push_node
+Creates a new node and adds it to the bottom of stack a.
+- Handles empty stack edge case
+- Updates top, end and size
+
+### ft_is_dupl
+Walks stack a and checks if a value already exists.
+- Calls ft_error if duplicate found
+
+### ft_fill_stack
+Parses all arguments and fills stack a.
+- Splits each argument by space to handle quoted strings
+- Validates each piece with ft_atol
+- Checks duplicates with ft_is_dupl
+- Pushes valid numbers with ft_push_node
+
+### ft_atol
+Converts string to long while validating.
+- Handles whitespace, optional sign
+- Calls ft_error on non-digit characters
+- Calls ft_check_limit to catch integer overflow
