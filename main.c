@@ -25,8 +25,8 @@ int	main(int argc, char **argv)
 	b = init_stack();
 	ft_fill_stack(a, argv);
 	if (ft_is_sorted(a))
-		printf("yes");
+		return (1);
 	else
-		sort_3(a);
+		sort_5(a,b);
 	return (0);
 }

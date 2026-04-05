@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 17:57:44 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 17:58:39 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 21:56:38 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,4 +29,19 @@ void	ft_free_split(char **splt)
 		ptrsplt++;
 	}
 	free (splt);
+}
+int	ft_min(t_stack *a)
+{
+	t_node *bn;
+	int mn;
+
+	bn = a->top;
+	mn = bn->val;
+	while (bn)
+	{
+		if(mn > bn->val)
+			mn = bn->val;
+		bn = bn->next;
+	}
+	return (mn);
 }

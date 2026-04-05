@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:37:24 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 21:43:45 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 22:51:12 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s_stack
 	size_t	size;
 }	t_stack;
 
+int		ft_min(t_stack *a);
 void	ft_error(void);
 void	ft_free_split(char **splt);
 t_stack	*init_stack(void);
@@ -60,5 +61,6 @@ long	ft_atol(char *s);
 
 int		ft_is_sorted(t_stack *a);
 void	sort_3(t_stack *a);
+void	sort_5(t_stack *a, t_stack *b);
 
 #endif

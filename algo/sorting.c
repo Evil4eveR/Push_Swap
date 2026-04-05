@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 18:03:18 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 21:44:51 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 23:04:44 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,4 +49,23 @@ void	sort_3(t_stack *a)
 	}
 	else if (bot > top && !ft_is_sorted(a))
 		sa(a);
+}
+
+void	sort_5(t_stack *a, t_stack *b)
+{
+	int		m;
+
+	m = ft_min(a);	
+	while(a->top->val != m)
+		ra(a);
+	if(ft_is_sorted(a))
+		return ;
+	pb(a,b);
+	m = ft_min(a);
+	while(a->top->val != m)
+		ra(a);
+	pb(a,b);
+	sort_3(a);
+	pa(a,b);
+	pa(a,b);
 }
