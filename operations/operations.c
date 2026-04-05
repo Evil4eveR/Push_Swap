@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 16:34:00 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 23:54:14 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 20:45:43 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	pa(t_stack *a, t_stack *b)
 {
 	t_node	*mov;
 
+	write(1, "pa\n", 3);
 	mov = b->top;
 	b->top = mov->next;
 	b->size--;
@@ -32,6 +33,7 @@ void	pb(t_stack *a, t_stack *b)
 {
 	t_node	*mov;
 
+	write(1, "pb\n", 3);
 	mov = a->top;
 	a->top = mov->next;
 	a->size--;
@@ -48,18 +50,21 @@ void	pb(t_stack *a, t_stack *b)
 
 void	ss(t_stack *a, t_stack *b)
 {
+	write(1, "ss\n", 3);
 	sa(a);
 	sb(b);
 }
 
 void	rr(t_stack *a, t_stack *b)
 {
+	write(1, "rr\n", 3);
 	ra(a);
 	rb(b);
 }
 
 void	rrr(t_stack *a, t_stack *b)
 {
+	write(1, "rrr\n", 4);
 	rra(a);
 	rrb(b);
 }

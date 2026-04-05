@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:42:36 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 13:52:39 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 20:46:07 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ void	sa(t_stack *a)
 
 	if (a->size <= 1)
 		return ;
+	write(1, "sa\n", 3);
 	tmp = a->top->val;
 	a->top->val = a->top->next->val;
 	a->top->next->val = tmp;
@@ -29,6 +30,7 @@ void	ra(t_stack *a)
 
 	if (a->size <= 1)
 		return ;
+	write(1, "ra\n", 3);
 	mov = a->top;
 	a->top = a->top->next;
 	mov->next = NULL;
@@ -42,6 +44,7 @@ void	rra(t_stack *a)
 
 	if (a->size <= 1)
 		return ;
+	write(1, "rra\n", 4);
 	prev = a->top;
 	while (prev->next != a->end)
 		prev = prev->next;

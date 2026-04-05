@@ -120,3 +120,18 @@ Converts string to long while validating.
 - Handles whitespace, optional sign
 - Calls ft_error on non-digit characters
 - Calls ft_check_limit to catch integer overflow
+
+### sort_3
+this sort function handle 5 cases. For each one tell me which operations and 3 integers  
+
+```  
+1 3 2  → rra + sa 
+
+2 1 3  → sa  
+
+2 3 1  → rra  
+
+3 1 2  → ra  
+
+3 2 1  → ra + sa  
+```
