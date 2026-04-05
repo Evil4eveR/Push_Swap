@@ -31,29 +31,15 @@ void	ft_error(void)
 	exit(1);
 }
 
-void	ft_check_arg(char *arg)
+void	ft_free_split(char **splt)
 {
+	char	**ptrsplt;
 
-	long long	n;
-	n = ft_atol(arg);
-
-	while(*arg)
+	ptrsplt = splt;
+	while (*ptrsplt)
 	{
-		if(ft_isdigit((int)*arg))
-			arg++;		
-		else
-			ft_error();
+		free(*ptrsplt);
+		ptrsplt++;
 	}
-	if(n > INT_MAX || n < INT_MIN)
-		ft_error();
-}
-
-void	ft_check_args(char **argv)
-{
-	argv++;
-	while (*argv)
-	{
-		ft_check_arg(*argv);
-		argv++;
-	}
+	free (splt);
 }

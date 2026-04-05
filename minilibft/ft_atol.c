@@ -6,15 +6,15 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 12:18:16 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 12:50:39 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 13:52:03 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-long long	ft_atol(char *s)
+long	ft_atol(char *s)
 {
-	long long	n;
+	long int	n;
 	int			sig;
 
 	n = 0;
@@ -29,7 +29,7 @@ long long	ft_atol(char *s)
 	}
 	while (*s)
 	{
-		if(ft_isdigit((int)*s))
+		if (ft_isdigit((int) *s))
 		{
 			n = (n * 10) + (*s - '0');
 			s++;
@@ -39,5 +39,3 @@ long long	ft_atol(char *s)
 	}
 	return (n * sig);
 }
-
-

@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:42:36 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 23:54:07 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 13:52:39 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,3 @@ void	rra(t_stack *a)
 	a->end = prev;
 	a->end->next = NULL;
 }
-
