@@ -13,15 +13,16 @@
 #include "push_swap.h"
 #include <stdio.h>
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_stack *a;
-	t_stack *b;
-	(void)argv;
-	if(argc <= 1)
+	t_stack	*a;
+	t_stack	*b;
+
+	if (argc <= 1)
 		return (0);
+	argv++;
 	a = init_stack();
 	b = init_stack();
-
+	ft_fill_stack(a, argv);
 	return (0);
 }

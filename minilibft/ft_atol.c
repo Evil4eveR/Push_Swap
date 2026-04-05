@@ -6,11 +6,19 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 12:18:16 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 13:52:03 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 17:46:55 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	ft_check_limit(long n, int sig)
+{
+    if (sig == 1 && n > INT_MAX)
+        ft_error();
+    if (sig == -1 && -n < INT_MIN)
+		ft_error();
+}
 
 long	ft_atol(char *s)
 {
@@ -32,6 +40,7 @@ long	ft_atol(char *s)
 		if (ft_isdigit((int) *s))
 		{
 			n = (n * 10) + (*s - '0');
+			ft_check_limit(n, sig);
 			s++;
 		}
 		else

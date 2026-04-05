@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:37:24 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 15:15:15 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 17:14:44 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,9 @@ typedef struct s_stack
 void	ft_error(void);
 void	ft_free_split(char **splt);
 t_stack	*init_stack(void);
+void	ft_fill_stack(t_stack *a, char **argv);
+void	ft_push_node(t_stack *a, int val);
+void	ft_is_dupl(t_stack *a, int val);
 
 void	pa(t_stack *a, t_stack *b);
 void	pb(t_stack *a, t_stack *b);
@@ -53,7 +56,6 @@ char	*ft_strdup(const char *s);
 char	**ft_split(char const *s, char c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *s);
-
 long	ft_atol(char *s);
 
 #endif
