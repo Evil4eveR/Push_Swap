@@ -6,7 +6,7 @@
 #    By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/04/04 11:50:28 by ymarmoud          #+#    #+#              #
-#    Updated: 2026/04/04 23:54:00 by ymarmoud         ###   ########.fr        #
+#    Updated: 2026/04/05 12:54:27 by ymarmoud         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,12 @@ LIBFT = minilibft
 
 SRCS	= main.c operations/operations.c operations/operations_b.c operations/operations_a.c \
 		minilibft/ft_strlen.c \
-		minilibft/ft_atoi.c \
 		minilibft/ft_split.c \
 		minilibft/ft_isdigit.c \
 		minilibft/ft_substr.c \
-		minilibft/ft_strdup.c
+		minilibft/ft_strdup.c \
+		minilibft/ft_atol.c \
+		utils/stack_utils.c 
 OBJS	= $(SRCS:.c=.o)
 
 all: $(NAME)

@@ -1,34 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/04 16:03:07 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/04 16:28:51 by ymarmoud         ###   ########.fr       */
+/*   Created: 2026/04/05 12:18:16 by ymarmoud          #+#    #+#             */
+/*   Updated: 2026/04/05 12:50:39 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	ft_atoi(const char *nptr)
+long long	ft_atol(char *s)
 {
-	int	result;
-	int	sign;
+	long long	n;
+	int			sig;
 
-	result = 0;
-	sign = 1;
-	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '-')
-		sign *= -1;
-	if (*nptr == '-' || *nptr == '+')
-		nptr++;
-	while (*nptr >= '0' && *nptr <= '9')
+	n = 0;
+	sig = 1;
+	while (*s == ' ' || (*s >= 9 && *s <= 13))
+		s++;
+	if (*s == '+' || *s == '-')
 	{
-		result = (result * 10) + (*nptr - '0');
-		nptr++;
+		if (*s == '-')
+			sig = -1;
+		s++;
 	}
-	return (result * sign);
+	while (*s)
+	{
+		if(ft_isdigit((int)*s))
+		{
+			n = (n * 10) + (*s - '0');
+			s++;
+		}
+		else
+			ft_error();
+	}
+	return (n * sig);
 }
+
+

@@ -12,33 +12,16 @@
 
 #include "push_swap.h"
 #include <stdio.h>
-#include <stdlib.h>
-
-t_stack	*init_stack(void)
-{
-	t_stack *stck;
-	stck = malloc(sizeof(t_stack));
-	if(!stck)
-		return NULL;
-	stck->top = NULL;
-	stck->end = NULL;
-	stck->size = 0;
-	return stck;
-}
 
 int main(int argc, char **argv)
 {
 	t_stack *a;
 	t_stack *b;
+	(void)argv;
 	if(argc <= 1)
 		return (0);
 	a = init_stack();
 	b = init_stack();
-	int i = 1;
-	while(i < argc)
-	{
-		printf("argv[%d] = %s\n", i,argv[i]);
-		i++;
-	}
+
 	return (0);
 }
