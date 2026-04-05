@@ -25,25 +25,6 @@ t_stack	*init_stack(void)
 	return (stck);
 }
 
-void	ft_error(void)
-{
-	write(2, "Error\n", 6);
-	exit(1);
-}
-
-void	ft_free_split(char **splt)
-{
-	char	**ptrsplt;
-
-	ptrsplt = splt;
-	while (*ptrsplt)
-	{
-		free(*ptrsplt);
-		ptrsplt++;
-	}
-	free (splt);
-}
-
 void	ft_is_dupl(t_stack *a, int val)
 {
 	t_node	*nod;

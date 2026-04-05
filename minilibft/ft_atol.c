@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 12:18:16 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 17:46:55 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/05 17:55:32 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void	ft_check_limit(long n, int sig)
 {
-    if (sig == 1 && n > INT_MAX)
-        ft_error();
-    if (sig == -1 && -n < INT_MIN)
+	if (sig == 1 && n > INT_MAX)
+		ft_error();
+	if (sig == (-1) && (-n) < INT_MIN)
 		ft_error();
 }
 
