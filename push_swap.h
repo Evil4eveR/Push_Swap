@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/04 11:37:24 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/05 22:51:12 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/07 14:09:18 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,12 @@
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
+# define CHUNK_SIZE 3
 
 typedef struct s_node
 {
 	int				val;
+	int				rank;
 	struct s_node	*next;
 }	t_node;
 
@@ -62,5 +64,8 @@ long	ft_atol(char *s);
 int		ft_is_sorted(t_stack *a);
 void	sort_3(t_stack *a);
 void	sort_5(t_stack *a, t_stack *b);
+int		get_max_rank(t_stack *a);
+void	radix_pass(t_stack *a, t_stack *b, int bit);
+void	big_sort(t_stack *a, t_stack *b);
 
 #endif

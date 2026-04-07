@@ -30,6 +30,8 @@ int	main(int argc, char **argv)
 			sort_3(a);
 		else if (a->size <= 5)
 			sort_5(a, b);
+		else
+			big_sort(a, b);
 	}
 	else
 		return (0);

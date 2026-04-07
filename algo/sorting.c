@@ -6,7 +6,7 @@
 /*   By: ymarmoud <ymarmoud@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/05 18:03:18 by ymarmoud          #+#    #+#             */
-/*   Updated: 2026/04/07 09:27:40 by ymarmoud         ###   ########.fr       */
+/*   Updated: 2026/04/07 14:08:45 by ymarmoud         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,6 +63,41 @@ void	sort_5(t_stack *a, t_stack *b)
 		pb(a, b);
 	}
 	sort_3(a);
+	while (b->size > 0)
+		pa(a, b);
+}
+
+int	get_max_rank(t_stack *a)
+{
+	t_node	*nd;
+	int		max;
+
+	nd = a->top;
+	max = nd->rank;
+	while (nd)
+	{
+		if (nd->rank > max)
+			max = nd->rank;
+		nd = nd->next;
+	}
+	return (max);
+}
+
+void	radix_pass(t_stack *a, t_stack *b, int bit)
+{
+	int	size;
+	int	i;
+
+	size = a->size;
+	i = 0;
+	while (i < size)
+	{
+		if (((a->top->rank >> bit) & 1) == 0)
+			pb(a, b);
+		else
+			ra(a);
+		i++;
+	}
 	while (b->size > 0)
 		pa(a, b);
 }

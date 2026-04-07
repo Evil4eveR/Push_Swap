@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^cd /home/ymarmoud/Desktop/github/push_swap && python3 << 'EOF'\nimport random\nimport subprocess\n\nnums = list\\(range\\(1, 101\\)\\)\nrandom\\.shuffle\\(nums\\)\n\nresult = subprocess\\.run\\(\\['\\./push_swap'\\] \\+ \\[str\\(n\\) for n in nums\\], capture_output=True, text=True\\)\nops = result\\.stdout\\.strip\\(\\)\\.split\\('\\\\n'\\) if result\\.stdout\\.strip\\(\\) else \\[\\]\nnum_ops = len\\(ops\\)\n\nchecker = subprocess\\.run\\(\\['\\./checker_linux'\\] \\+ \\[str\\(n\\) for n in nums\\], input=result\\.stdout, capture_output=True, text=True\\)\n\nprint\\(f\"Operations: \\{num_ops\\}\"\\)\nprint\\(f\"Status: \\{checker\\.stdout\\.strip\\(\\)\\}\"\\)\nprint\\(\"✓ PASS\" if checker\\.stdout\\.strip\\(\\) == \"OK\" else \"✗ FAIL\"\\)\nEOF\n$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

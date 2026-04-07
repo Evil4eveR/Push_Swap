@@ -46,6 +46,7 @@ void	ft_push_node(t_stack *a, int val)
 	if (!no)
 		return ;
 	no->val = val;
+	no->rank = 0;
 	no->next = NULL;
 	if (a->size == 0)
 	{
