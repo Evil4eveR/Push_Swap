@@ -24,9 +24,14 @@ int	main(int argc, char **argv)
 	a = init_stack();
 	b = init_stack();
 	ft_fill_stack(a, argv);
-	if (ft_is_sorted(a))
-		return (1);
+	if (!ft_is_sorted(a))
+	{
+		if (a->size <= 3)
+			sort_3(a);
+		else if (a->size <= 5)
+			sort_5(a, b);
+	}
 	else
-		sort_5(a,b);
+		return (0);
 	return (0);
 }
